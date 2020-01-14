@@ -39,6 +39,9 @@ public class BookServiceImplCaptorTest {
 
 	}
 	
+	/*
+	 * Verify if object is not empty
+	 */
 	@Test
 	public void test_sanity_getBook() throws Exception{
 		

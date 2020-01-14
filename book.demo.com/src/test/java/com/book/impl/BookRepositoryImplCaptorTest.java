@@ -32,7 +32,9 @@ public class BookRepositoryImplCaptorTest {
 		MockitoAnnotations.initMocks(this);
 		
 	}
-	
+	/*
+	 * Verify if object is not empty
+	 */
 	@Test
 	public void test_retrieveBookDetails_sanity() throws Exception{
 		
