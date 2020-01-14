@@ -87,9 +87,12 @@ public class runJunitTest {
 		
 		this.bookServiceImplPowerMockito.setUp();
 		this.bookServiceImplPowerMockito.test_getBook_powermockito();
+		this.bookServiceImplPowerMockito.tearDown();
+		
 		
 		this.bookRepositoryImplPowerMockitoTest.setUp();
 		this.bookRepositoryImplPowerMockitoTest.test_retrieveBookDetails_powermockito();
+		this.bookRepositoryImplPowerMockitoTest.tearDown();
 		
 		
 	}
