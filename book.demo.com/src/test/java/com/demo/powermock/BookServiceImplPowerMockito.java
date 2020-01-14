@@ -1,5 +1,6 @@
 package com.demo.powermock;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -55,6 +56,12 @@ public class BookServiceImplPowerMockito {
 		
 		Mockito.verify(nBookRepositoryImpl).getBook(Matchers.anyInt());
 				
+	}
+	
+	@After
+	public void tearDown() throws Exception{
+		nBookRepositoryImpl = null;
+		Assert.assertNull(nBookRepositoryImpl);
 	}
 	
 }
