@@ -24,21 +24,21 @@ public class BookVO {
 		this.bookList = bookList;
 	}
 	
-	public LinkedList<Book> getAllBookInformation(){
-		
+	public List<Book> getAllBookInformation(Book strBook){
+				
 		List<Book> listBook = new LinkedList<Book>();
-		
-		listBook.add(new Book(15, "Java Code", new Author("Minos Soumahoro", Sex.MAN)));
-		listBook.add(new Book(20, "Xcode View", new Author("Jennifer Manos", Sex.WOMAN)));
-		listBook.add(new Book(25, "C++ Code", new Author("Thomas Mark", Sex.MAN)));
-		listBook.add(new Book(35, "UX Design", new Author("Marine Lo", Sex.WOMAN)));
+
+		strBook.setBookId(Integer.valueOf(35));
+		strBook.setTitle("UX Design");
+		strBook.setAuthor(new Author("Marine Lo", Sex.WOMAN));
+		listBook.add(strBook);
 
 		for (Book book : listBook) {
 			
 			this.bookList.add(book);
 		}
 		
-		return (LinkedList<Book>) this.bookList;
+		return this.bookList;
 		
 	}
 }
