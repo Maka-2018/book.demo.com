@@ -48,18 +48,17 @@ public class BookVOMockitoTest {
 		
 	}
 	
-	@SuppressWarnings("unchecked")
 	@Test
 	public void test_getAllBookInformation() throws Exception{
 		
 		Book strBook = new Book(Integer.valueOf(25), "TDD", 
 				new Author("Marine Lo", Sex.WOMAN));
 		
-		Mockito.when(nBookVO.getAllBookInformation(strBook)).thenReturn(Matchers.anyList());
+		Mockito.when(nBookVO.getAllBookInformation(Matchers.any())).thenReturn(new LinkedList<Book>());
 		
 		List<Book> resultBook = nBookVO.getAllBookInformation(strBook);
-		
-		Mockito.verify(nBookVO).getAllBookInformation(strBook);
+				
+		Mockito.verify(nBookVO).getAllBookInformation(Matchers.any());
 		
 		Assert.assertNotNull(resultBook);
 
